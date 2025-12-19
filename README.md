@@ -1,6 +1,6 @@
 ## ParkVision: A Full-Stack System with Custom-Trained Models for Indoor Parking Detection
 
-![ParkVision Demo GIF](Demo.gif)
+![ParkVision Demo GIF](./Demo.gif)
 
 This project showcases the end-to-end development of a specialized computer vision solution for the challenging environment of indoor parking lots. It encompasses the entire machine learning lifecycle. **Custom data collection, manual annotation, model fine-tuning**, and deployment throught a **asynchronous backend API**
 
