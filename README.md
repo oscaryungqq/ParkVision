@@ -77,21 +77,6 @@ The backend is designed to serve the custom AI models in a scalable and resilien
 - **AI / CV:** **PyTorch**, **Custom Fine-Tuned YOLOv8**, **DeepSORT**, **OpenCV**
 - **Containerization:** **Docker** (for services)
 
-```mermaid
-graph TD
-    A[User] -->|1. POST /upload-video| B(FastAPI Server);
-    B -->|2. Create Job Record| C(PostgreSQL DB);
-    B -->|3. Send Task(job_id)| D(Redis Queue);
-    B -->|4. Return job_id| A;
-    E(Celery Worker) -->|5. Fetch Task| D;
-    E -->|6. Load Custom AI Models| F[Fine-Tuned YOLOv8];
-    E -->|7. Process Video| F;
-    E -->|8. Update Job Status in DB| C;
-    A -->|9. GET /status/{job_id}| B;
-    B -->|10. Read Job Status from DB| C;
-    B -->|11. Return Status| A;
-```
-
 ## Getting Started
 
 Follow these instruction to set up and run the complete application environment locally.
